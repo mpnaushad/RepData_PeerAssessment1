@@ -1,4 +1,9 @@
-# Reproducible Research: Peer Assessment 1
+---
+Title: "Reproducible Research: Peer Assessment 1"
+output: 
+html_document:
+keep_md: true
+---
 
 ## Loading data
 
@@ -84,9 +89,9 @@ hist(steps_per_day$total_steps,
      main="Histogram of the total number of steps taken each day\n(NA removed)")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-4-1.png) 
+![plot of chunk unnamed-chunk-4](figure/unnamed-chunk-4-1.png) 
 
-### 3.Calculate and report the mean and median of the total number of steps taken per day
+### 3. Calculate and report the mean and median of the total number of steps taken per day
 
 ```r
 mean(steps_per_day$total_steps)
@@ -143,7 +148,7 @@ plot(mean_activitydata$interval,
      main="Time-series of the average number of steps per intervals\n(NA removed)")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-6-1.png) 
+![plot of chunk unnamed-chunk-6](figure/unnamed-chunk-6-1.png) 
 
 ### 2. Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps?
 
@@ -207,7 +212,7 @@ steps_per_day <- aggregate(activitydata$steps, by=list(activitydata$date), FUN=s
 names(steps_per_day) <- c("date", "total_steps")
 
 # Generate the histogram of the total number of steps each day
-hist(steps_per_day$total, 
+hist(steps_per_day$total_steps, 
      breaks=seq(from=0, to=25000, by=2500),
      col="blue", 
      xlab="Total number of steps", 
@@ -215,7 +220,7 @@ hist(steps_per_day$total,
      main="Histogram of the total number of steps taken each day\n(NA replaced by mean value)")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-11-1.png) 
+![plot of chunk unnamed-chunk-11](figure/unnamed-chunk-11-1.png) 
 
 ```r
 # Calculate mean and median value
@@ -291,4 +296,4 @@ xyplot(mean ~ interval | daytype, mean_daytype_steps,
        layout=c(1,2))
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-13-1.png) 
+![plot of chunk unnamed-chunk-13](figure/unnamed-chunk-13-1.png) 
