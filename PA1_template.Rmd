@@ -1,8 +1,8 @@
 ---
 Title: "Reproducible Research: Peer Assessment 1"
-output: 
-html_document:
-keep_md: true
+Output File: PA1_template.md
+Graphs/Plots: \figure
+html_document: PA1_template.html
 ---
 
 ## Loading data
